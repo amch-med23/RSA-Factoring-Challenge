@@ -27,5 +27,7 @@ def factorpn():
                 if x == (ln // 2) + 1:
                     print("{)={}*{}".format(ln, ln, 1))
     except IndexError:
-            pass
+        pass
+
+
 factorpn()

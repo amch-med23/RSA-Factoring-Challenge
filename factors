@@ -29,5 +29,5 @@ try:
             n_from_file = int(sel_line.split('\n')[0])
             factorsn(n_from_file)
             sel_line = file.readline()
-except:
+except IndexError:
     pass
