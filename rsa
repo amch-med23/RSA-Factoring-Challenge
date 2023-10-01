@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+"""
+factorize the number from the file into a product of two prime numbers
+"""
+from sys import argv
+
+
+def factorpn():
+    """
+    get the number from the file and factorize it into tow prime numbers
+    (fromat: n=p*q), p nad q are prime numbers
+    """
+    try:
+        file = argv[1]
+        with open(file) as o_file:
+            for ln in o_file:
+                ln = int(ln)
+                if ln % 2 == 0:
+                    print("{}={}*{}".format(ln, ln // 2, 2))
+                    continue
+                x = 3
+                while x < ln // 2:
+                    if ln % x == 0:
+                        print("{}={}*{}".format(ln, ln // x, x))
+                        break
+                    x = x + 2
+                if x == (ln // 2) + 1:
+                    print("{)={}*{}".format(ln, ln, 1))
+    except IndexError:
+            pass
+factorpn()
