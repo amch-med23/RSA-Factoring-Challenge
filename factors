@@ -5,7 +5,7 @@
 from sys import argv
 
 
-def factorsn(n_from_file):
+def factorize(n_from_file):
     """
     Finds the smaller numbers that multiplays to a given number
     """
@@ -27,7 +27,7 @@ try:
 
         while sel_line != "":
             n_from_file = int(sel_line.split('\n')[0])
-            factorsn(n_from_file)
+            factorize(n_from_file)
             sel_line = file.readline()
 except IndexError:
     pass

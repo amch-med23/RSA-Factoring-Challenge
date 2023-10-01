@@ -5,7 +5,7 @@ factorize the number from the file into a product of two prime numbers
 from sys import argv
 
 
-def factorpn():
+def factorize():
     """
     get the number from the file and factorize it into tow prime numbers
     (fromat: n=p*q), p nad q are prime numbers
@@ -30,4 +30,4 @@ def factorpn():
         pass
 
 
-factorpn()
+factorize()
